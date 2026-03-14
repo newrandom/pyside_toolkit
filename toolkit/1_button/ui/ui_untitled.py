@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'untitledRyNxkO.ui'
+## Form generated from reading UI file 'untitledGxVyhi.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.10.2
 ##
@@ -27,10 +27,10 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName(u"centralwidget")
         self.btnSync = QPushButton(self.centralwidget)
         self.btnSync.setObjectName(u"btnSync")
-        self.btnSync.setGeometry(QRect(80, 190, 75, 24))
+        self.btnSync.setGeometry(QRect(30, 190, 75, 24))
         self.btnAsync = QPushButton(self.centralwidget)
         self.btnAsync.setObjectName(u"btnAsync")
-        self.btnAsync.setGeometry(QRect(220, 190, 75, 24))
+        self.btnAsync.setGeometry(QRect(140, 190, 75, 24))
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
         self.label.setGeometry(QRect(40, 20, 281, 61))
@@ -38,10 +38,13 @@ class Ui_MainWindow(object):
         font.setPointSize(15)
         self.label.setFont(font)
         self.label.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.btnSync2Async = QPushButton(self.centralwidget)
+        self.btnSync2Async.setObjectName(u"btnSync2Async")
+        self.btnSync2Async.setGeometry(QRect(250, 190, 91, 24))
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 365, 22))
+        self.menubar.setGeometry(QRect(0, 0, 365, 30))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -57,5 +60,6 @@ class Ui_MainWindow(object):
         self.btnSync.setText(QCoreApplication.translate("MainWindow", u"\ub3d9\uae30\ubc84\ud2bc", None))
         self.btnAsync.setText(QCoreApplication.translate("MainWindow", u"\ube44\ub3d9\uae30\ubc84\ud2bc", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"TextLabel", None))
+        self.btnSync2Async.setText(QCoreApplication.translate("MainWindow", u"\ub3d9\uae30 -> \ube44\ub3d9\uae30", None))
     # retranslateUi
 

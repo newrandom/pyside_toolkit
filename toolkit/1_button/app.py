@@ -61,6 +61,12 @@ class MainWindow(QMainWindow):
             # 비동기 작업이 없거나 완료된 경우 초기화
             self.number = 0
 
+    # 동기 작업을 비동기처럼 실행하는 메서드
+    async def clickBtnSync2Async(self):
+        # self.task = await asyncio.to_thread(self.clickBtnSync)
+        self.task = await asyncio.to_thread(lambda: self.clickBtnSync())
+        print(self.task)        # to_thread는 동기 작업이 완료될 때까지 기다렸다가 결과를 반환하므로, clickBtnSync()의 결과는 None이 될 것임
+
 if __name__=="__main__":
     app = QApplication()
     window = MainWindow()
@@ -68,6 +74,7 @@ if __name__=="__main__":
     # 버튼 연결
     window.ui.btnSync.clicked.connect(lambda: window.clickBtnSync())
     window.ui.btnAsync.clicked.connect(lambda: asyncio.create_task(window.clickBtnAsync()))
+    window.ui.btnSync2Async.clicked.connect(lambda:asyncio.create_task(window.clickBtnSync2Async()))
 
     window.show()
     # app.exec()        # app.exec() 를 선언하면 비동기 작업이 실행되지 않음

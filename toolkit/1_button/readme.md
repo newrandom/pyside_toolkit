@@ -6,3 +6,8 @@
 - 이때 `import PySide6.QtAsyncio` 모듈을 이용하면 동기, 비동기 모두 사용이 가능한 것으로 보인다.
     * `import PySide6.QtAsyncio as QtAsyncio`
     * `QtAsyncio.run()`
+
+> 260314 추가
+- 동기 작업을 비동기화처럼 보일 수 있도록 추가
+    * `asyncio.to_thread(func)` 
+    * 또는 `asyncio.to_thread(lambda:func())`
